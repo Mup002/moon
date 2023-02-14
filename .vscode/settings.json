@@ -1,0 +1,13 @@
+{
+    "files.autoSave": "afterDelay",
+    "liveServer.settings.ChromeDebuggingAttachment": false,
+    "workbench.colorCustomizations": {
+        "[Default Dark+ Experimental]": {
+            
+        }
+    },
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "liveSassCompile.settings.watchOnLaunch": true
+}

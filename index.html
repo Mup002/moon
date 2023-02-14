@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Parallax Scrolling Website || Vanilla JavaScript></title>
+     <link rel = "stylesheet" type = "text/css" href = "css/main.css" -->
+</head>
+<body>
+   <header>
+    <a href = "#" class = "logo">Logo</a>
+    <ul>
+        <li><a href = "#" class = "active">Home</a></li>
+        <li><a href = "#">About</a></li>
+        <li><a href = "#">Work</a></li>
+        <li><a href = "#">Contact</a></li>
+    </ul>
+   </header>
+   <section>
+    <img src = "assets/stars.png" id = "stars">
+    <img src = "assets/moon.png" id = "moon">
+    <img src = "assets/mountains_behind.png" id = "mountains_behind">
+    <h2 id = "text">Moon Light</h2>
+    <a href = "#" id ="btn">Explore</a>
+    <img src = "assets/mountains_front.png" id = "mountains_front">
+   </section>
+   <div class = "sec" id = "sec">
+    <h2>Parallax Scrolling Effect</h2>
+    <p>Piano Sonata số 14 ở giọng Đô thăng thứ, nhịp điệu Quasi una fantasia, Op. 27, số 2, là một bản sonata dành cho piano
+    của Ludwig van Beethoven. Nó được hoàn thành vào năm 1801 và dành tặng vào năm 1802 cho học trò của ông là nữ bá tước
+    Giulietta Guicciardi. Bản nhạc này là một trong những sáng tác phổ biến nhất của Beethoven cho piano, và nó là một bản
+    nhạc được yêu thích nhất ngay cả trong thời đại của ông. Beethoven viết Bản tình ca ánh trăng vào đầu những năm 30 tuổi,
+    sau khi ông đã hoàn thành một số tác phẩm được giao; không có bằng chứng nào cho thấy anh ấy được giao viết bản sonata
+    này.<br>Bản sonata chứa đựng những ý tưởng ảo diệu không thường thấy ở những bản Sonata khác, đặc biệt là phần cuối cùng là một
+    phần rất khó sáng tác, vì thế đây là một bản sonata có kiểu nhịp độ và định thể không chính thống (vào thời điểm bấy giờ
+    các bản sonata thường bắt đầu với tiết điệu nhanh). Nhưng bản Sonata ánh trăng lại bắt đầu với thể Adagio, phần giữa với
+    Allegretto, phần cuối cùng cực kì nhanh:<br>Adagio (cung Đô thăng thứ)
+    Allegretto (cung Rê giáng trưởng)
+    Presto agitato (cung Đô thăng thứ)
+    Lịch sử sáng tác
+    Ludwig van Beethoven viết bản sonata này dành cho cô học sinh dương cầm 17 tuổi của ông Gräfin Giulietta Guicciardi[1]
+    (1784–1856) vào năm 1801 và sau khi ông mất vài năm thì bản sonate được nhà phê bình âm nhạc Ludwig Rellstab đặt cho cái
+    tên phổ biến như bây giờ, ông đã so sánh bản nhạc với ánh trăng trên hồ Lucerne[2][3].
+    
+    Suốt cuộc đời Beethoven, bản Sonata Ánh trăng là bản nhạc viết cho đàn dương cầm nổi tiếng nhất của ông,[4] giá trị của
+    nó thể hiện bởi sự tự do trong sáng tác và những cảm xúc kì diệu đầy lãng mạn.<br></p>
+   </div>
+   <script>
+    let stars = document.getElementById('stars');
+    let moon = document.getElementById('moon');
+    let mountains_behind = document.getElementById('mountains_behind');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let mountains_front = document.getElementById('mountains_front');
+
+    window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountains_front.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+        text.style.marginTop = value * 1.5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+    })
+   </script>
+</body>
+</html>
